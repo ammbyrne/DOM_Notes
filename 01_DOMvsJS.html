@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>DOM vs JS</title>
+  </head>
+  <body>
+    <h1>What is shivoo</h1>
+    <p>Click to find out </p>
+    <button onclick="newWindow()">Curious?</button>
+    <script>
+     function newWindow() {
+        let url = 'https://dictionary.com/browse/shivoo?s=t';
+        let newWindow = window.open(url, "", "width=500, height=800");
+        setTimeout(() => {
+          newWindow.close();
+        }, 5000);
+      } 
+    </script>
+  </body>
+</html>

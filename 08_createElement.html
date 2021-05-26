@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Creating Elements</title>
+    <style>
+      body {
+        background-color: rgb(74,59,206);
+        padding: 30px;
+      }
+      h1 {
+        color: #14FFF7;
+        font-size: 72px;
+        font-family: san-serif;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Am I real?</h1>
+    <script>
+      let newElement = document.createElement('p');
+      newElement.textContent = "Or dynamic";
+      // step 1 - get the parent
+      let bodyElement = document.querySelector('body');
+      // setp 2 - attach p tag to body
+      bodyElement.appendChild(newElement);
+    </script>
+  </body>
+</html>

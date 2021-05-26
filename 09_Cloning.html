@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Cloning Elements</title>
+    <style>
+      body {
+        background-color: rgb(74,59,206);
+        padding: 30px;
+      }
+      h1, p {
+        color: #14FFF7;
+        font-size: 72px;
+        font-family: san-serif;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Am I real?</h1>
+    <p class="message">Or just a paragraph?</p>
+    <script>
+      let bodyElement = document.querySelector('body');
+      let paraElement = document.querySelector('.message');
+
+      function cloneMe() {
+        let clonedText = paraElement.cloneNode(true);
+        bodyElement.appendChild(clonedText);
+      }
+      // built-in DOM function (from window object) to call our function on
+      setInterval(cloneMe, 1000);
+    </script>
+  </body>
+</html>
