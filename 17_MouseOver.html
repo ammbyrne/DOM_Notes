@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <h1>Click Image</h1>
+    <img src='./dogs.jpeg' width=300px height=200px id='image'>
+    <div id="content"></div>
+    <br><br>
+    <script>
+      let image = document.getElementById('image');
+      let divContent = document.getElementById('content');
+      image.addEventListener('click', displayText, false);
+      function displayText () {
+        divContent.textContent = "You clicked";
+      }
+    </script>
+  </body>
+</html>

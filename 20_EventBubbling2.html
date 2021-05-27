@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <button id="button1">Button One</button>
+    <button id="button2">Button Two</button>
+    <script>
+      let button1 =document.getElementById('button1');
+      // execute handler in capturing phase
+      button1.addEventListener('click',clickHandler,true);
+      // execute handler in bubbling phase
+      button1.addEventListener('click',clickHandler,false);
+
+      function clickHandler() {
+        console.log('I have been clicked');
+      }
+    </script>
+  </body>
+</html>
